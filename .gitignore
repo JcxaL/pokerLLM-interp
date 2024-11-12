@@ -23,9 +23,6 @@ ENV/
 *.pyo
 *.pyc
 
-# Ignore Jupyter Notebook outputs
-*.ipynb
-
 # Ignore data and model checkpoints
 data/processed/
 models/
