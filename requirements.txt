@@ -1,0 +1,7 @@
+pandas
+pdfplumber
+pytesseract
+Pillow
+openai
+transformers
+torch
