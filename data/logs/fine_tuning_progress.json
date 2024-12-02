@@ -1,0 +1,118 @@
+{
+    "job_id": "ftjob-0LE07n7ZjPlUpzs6IpL1xFfW",
+    "start_time": "2024-12-01T18:23:18.789707",
+    "status_updates": [
+        {
+            "timestamp": "2024-12-01T18:23:19.196477",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:24:19.524150",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:25:19.787739",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:26:17.590096",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:27:18.006681",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:28:18.437320",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:29:18.722936",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:30:19.043000",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:31:19.468026",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:32:19.916709",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:33:20.176607",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:34:20.506497",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": null,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:35:20.772731",
+            "status": "running",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": 1733078117,
+            "fine_tuned_model": null
+        },
+        {
+            "timestamp": "2024-12-01T18:36:21.442165",
+            "status": "succeeded",
+            "model": "gpt-3.5-turbo-0125",
+            "created_at": 1733077158,
+            "finished_at": 1733078117,
+            "fine_tuned_model": "ft:gpt-3.5-turbo-0125:personal::AZj4oynR"
+        }
+    ]
+}
