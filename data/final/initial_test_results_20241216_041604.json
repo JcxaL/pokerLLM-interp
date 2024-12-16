@@ -1,0 +1,22 @@
+[
+  {
+    "query": "Explain GTO strategy in poker",
+    "response": "GTO (Game Theory Optimal) strategy in poker is a balanced approach that aims to make your play unexploitable. It involves using a mixed strategy of various actions (betting, calling, folding) with different hand ranges to keep opponents indifferent to their choices."
+  },
+  {
+    "query": "What's the optimal 3-betting range from the button?",
+    "response": "From the button, a strong 3-betting range could include: AA-22, AKs-A2s, AKo-AJo, KQs-KTs, QJs, JTs, T9s, 98s, 87s, 76s, 65s, 54s. This range balances value hands with numerous suited and connected bluffs, taking advantage of the button's positional strength and fold equity."
+  },
+  {
+    "query": "How should I approach multi-way pots?",
+    "response": "In multi-way pots, tighten your range and prioritize strong, well-defined hands. Avoid speculative hands with low implied odds, as post-flop play becomes complex. Focus on hands that can make the nuts or strong draws."
+  },
+  {
+    "query": "Explain ICM considerations in tournament play",
+    "response": "ICM (Independent Chip Model) is a crucial concept in tournament poker that quantifies a player's equity in the tournament based on their chip stack size, the remaining payout structure, and the number of players left. Unlike cash games where chips have a direct monetary value, in tournaments, the value of your chips fluctuates depending on these factors. Understanding ICM helps players make decisions that maximize their expected payout rather than just their chip count."
+  },
+  {
+    "query": "What's the correct strategy for playing AK preflop?",
+    "response": "The correct strategy for playing AK preflop in Texas Hold'em Poker is to raise or re-raise. If you hold AK suited, consider a 3-bet or 4-bet to apply pressure. If facing a 3-bet, a 4-bet is often appropriate. The goal is to build a pot with your strong starting hand and narrow the field to improve your chances of winning."
+  }
+]

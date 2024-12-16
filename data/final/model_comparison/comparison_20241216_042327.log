@@ -1,0 +1,183 @@
+2024-12-16 04:23:27,773 - INFO - Initialized ModelComparator
+2024-12-16 04:23:27,773 - INFO - Fine-tuned model: ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:23:27,774 - INFO - Base model: gpt-4o-mini-2024-07-18
+2024-12-16 04:23:27,774 - INFO - Starting comparison of 16 test cases
+2024-12-16 04:23:27,795 - INFO - Processing case 1/16 - Category: basic_concepts_fundamentals
+2024-12-16 04:23:27,796 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:23:31,414 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 3.62 seconds
+2024-12-16 04:23:31,415 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:23:43,691 - INFO - Response received from gpt-4o-mini-2024-07-18 in 12.28 seconds
+2024-12-16 04:23:43,693 - INFO - Case 1 completed - FT time: 3.62s, Base time: 12.28s
+2024-12-16 04:23:43,694 - INFO - Processing case 2/16 - Category: basic_concepts_fundamentals
+2024-12-16 04:23:43,696 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:23:45,736 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 2.04 seconds
+2024-12-16 04:23:45,738 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:23:53,989 - INFO - Response received from gpt-4o-mini-2024-07-18 in 8.25 seconds
+2024-12-16 04:23:53,991 - INFO - Case 2 completed - FT time: 2.04s, Base time: 8.25s
+2024-12-16 04:23:53,994 - INFO - Processing case 3/16 - Category: strategic_preflop_strategy
+2024-12-16 04:23:53,997 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:23:54,811 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.81 seconds
+2024-12-16 04:23:54,812 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:24:04,376 - INFO - Response received from gpt-4o-mini-2024-07-18 in 9.56 seconds
+2024-12-16 04:24:04,378 - INFO - Case 3 completed - FT time: 0.81s, Base time: 9.56s
+2024-12-16 04:24:04,381 - INFO - Processing case 4/16 - Category: strategic_postflop_strategy
+2024-12-16 04:24:04,384 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:24:05,707 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 1.32 seconds
+2024-12-16 04:24:05,709 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:24:27,000 - INFO - Response received from gpt-4o-mini-2024-07-18 in 21.29 seconds
+2024-12-16 04:24:27,002 - INFO - Case 4 completed - FT time: 1.32s, Base time: 21.29s
+2024-12-16 04:24:27,007 - INFO - Processing case 5/16 - Category: complex_spots_multiway_pots
+2024-12-16 04:24:27,008 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:24:33,249 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 6.24 seconds
+2024-12-16 04:24:33,250 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:24:42,773 - INFO - Response received from gpt-4o-mini-2024-07-18 in 9.52 seconds
+2024-12-16 04:24:42,774 - INFO - Case 5 completed - FT time: 6.24s, Base time: 9.52s
+2024-12-16 04:24:42,776 - INFO - Processing case 6/16 - Category: complex_spots_bluff_spots
+2024-12-16 04:24:42,777 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:24:47,348 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 4.57 seconds
+2024-12-16 04:24:47,349 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:24:54,734 - INFO - Response received from gpt-4o-mini-2024-07-18 in 7.39 seconds
+2024-12-16 04:24:54,735 - INFO - Case 6 completed - FT time: 4.57s, Base time: 7.39s
+2024-12-16 04:24:54,736 - INFO - Processing case 7/16 - Category: tournament_icm_pressure
+2024-12-16 04:24:54,737 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:24:55,373 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.64 seconds
+2024-12-16 04:24:55,375 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:02,347 - INFO - Response received from gpt-4o-mini-2024-07-18 in 6.97 seconds
+2024-12-16 04:25:02,349 - INFO - Case 7 completed - FT time: 0.64s, Base time: 6.97s
+2024-12-16 04:25:02,350 - INFO - Processing case 8/16 - Category: tournament_bubble_play
+2024-12-16 04:25:02,351 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:06,999 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 4.65 seconds
+2024-12-16 04:25:07,000 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:17,899 - INFO - Response received from gpt-4o-mini-2024-07-18 in 10.90 seconds
+2024-12-16 04:25:17,901 - INFO - Case 8 completed - FT time: 4.65s, Base time: 10.90s
+2024-12-16 04:25:17,903 - INFO - Processing case 9/16 - Category: player_adjustments_exploitative
+2024-12-16 04:25:17,904 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:18,587 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.68 seconds
+2024-12-16 04:25:18,588 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:31,212 - INFO - Response received from gpt-4o-mini-2024-07-18 in 12.62 seconds
+2024-12-16 04:25:31,214 - INFO - Case 9 completed - FT time: 0.68s, Base time: 12.62s
+2024-12-16 04:25:31,217 - INFO - Processing case 10/16 - Category: player_adjustments_table_dynamics
+2024-12-16 04:25:31,222 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:32,181 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.96 seconds
+2024-12-16 04:25:32,182 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:39,135 - INFO - Response received from gpt-4o-mini-2024-07-18 in 6.95 seconds
+2024-12-16 04:25:39,137 - INFO - Case 10 completed - FT time: 0.96s, Base time: 6.95s
+2024-12-16 04:25:39,141 - INFO - Processing case 11/16 - Category: hand_reading_range_analysis
+2024-12-16 04:25:39,142 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:40,041 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.90 seconds
+2024-12-16 04:25:40,043 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:52,098 - INFO - Response received from gpt-4o-mini-2024-07-18 in 12.05 seconds
+2024-12-16 04:25:52,100 - INFO - Case 11 completed - FT time: 0.90s, Base time: 12.05s
+2024-12-16 04:25:52,103 - INFO - Processing case 12/16 - Category: hand_reading_live_tells
+2024-12-16 04:25:52,106 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:53,500 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 1.39 seconds
+2024-12-16 04:25:53,501 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:25:58,062 - INFO - Response received from gpt-4o-mini-2024-07-18 in 4.56 seconds
+2024-12-16 04:25:58,063 - INFO - Case 12 completed - FT time: 1.39s, Base time: 4.56s
+2024-12-16 04:25:58,065 - INFO - Processing case 13/16 - Category: end_game_heads_up
+2024-12-16 04:25:58,069 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:25:58,796 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.73 seconds
+2024-12-16 04:25:58,798 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:26:11,977 - INFO - Response received from gpt-4o-mini-2024-07-18 in 13.18 seconds
+2024-12-16 04:26:11,978 - INFO - Case 13 completed - FT time: 0.73s, Base time: 13.18s
+2024-12-16 04:26:11,981 - INFO - Processing case 14/16 - Category: end_game_final_table
+2024-12-16 04:26:11,984 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:26:14,997 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 3.01 seconds
+2024-12-16 04:26:14,999 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:26:29,510 - INFO - Response received from gpt-4o-mini-2024-07-18 in 14.51 seconds
+2024-12-16 04:26:29,512 - INFO - Case 14 completed - FT time: 3.01s, Base time: 14.51s
+2024-12-16 04:26:29,515 - INFO - Processing case 15/16 - Category: mental_game_tilt_control
+2024-12-16 04:26:29,518 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:26:30,131 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 0.61 seconds
+2024-12-16 04:26:30,133 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:26:43,834 - INFO - Response received from gpt-4o-mini-2024-07-18 in 13.70 seconds
+2024-12-16 04:26:43,836 - INFO - Case 15 completed - FT time: 0.61s, Base time: 13.70s
+2024-12-16 04:26:43,839 - INFO - Processing case 16/16 - Category: mental_game_bankroll_management
+2024-12-16 04:26:43,842 - INFO - Querying ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or
+2024-12-16 04:26:50,212 - INFO - Response received from ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or in 6.37 seconds
+2024-12-16 04:26:50,214 - INFO - Querying gpt-4o-mini-2024-07-18
+2024-12-16 04:26:57,741 - INFO - Response received from gpt-4o-mini-2024-07-18 in 7.53 seconds
+2024-12-16 04:26:57,743 - INFO - Case 16 completed - FT time: 6.37s, Base time: 7.53s
+2024-12-16 04:26:57,749 - INFO - 
+Comparison Summary:
+2024-12-16 04:26:57,750 - INFO - Total cases processed: 16
+2024-12-16 04:26:57,753 - INFO - Average FT response time: 2.41s
+2024-12-16 04:26:57,753 - INFO - Average Base response time: 10.70s
+2024-12-16 04:26:57,759 - INFO - Results saved to ../data/final/model_comparison/comparison_results_20241216_042657.csv
+2024-12-16 04:26:57,759 - INFO - 
+Detailed Statistics:
+2024-12-16 04:26:57,760 - INFO - 
+Category: basic_concepts_fundamentals
+2024-12-16 04:26:57,760 - INFO - Cases: 2
+2024-12-16 04:26:57,761 - INFO - Avg FT time: 2.83s
+2024-12-16 04:26:57,761 - INFO - Avg Base time: 10.26s
+2024-12-16 04:26:57,762 - INFO - 
+Category: strategic_preflop_strategy
+2024-12-16 04:26:57,762 - INFO - Cases: 1
+2024-12-16 04:26:57,763 - INFO - Avg FT time: 0.81s
+2024-12-16 04:26:57,763 - INFO - Avg Base time: 9.56s
+2024-12-16 04:26:57,764 - INFO - 
+Category: strategic_postflop_strategy
+2024-12-16 04:26:57,764 - INFO - Cases: 1
+2024-12-16 04:26:57,764 - INFO - Avg FT time: 1.32s
+2024-12-16 04:26:57,765 - INFO - Avg Base time: 21.29s
+2024-12-16 04:26:57,765 - INFO - 
+Category: complex_spots_multiway_pots
+2024-12-16 04:26:57,766 - INFO - Cases: 1
+2024-12-16 04:26:57,766 - INFO - Avg FT time: 6.24s
+2024-12-16 04:26:57,766 - INFO - Avg Base time: 9.52s
+2024-12-16 04:26:57,767 - INFO - 
+Category: complex_spots_bluff_spots
+2024-12-16 04:26:57,767 - INFO - Cases: 1
+2024-12-16 04:26:57,768 - INFO - Avg FT time: 4.57s
+2024-12-16 04:26:57,768 - INFO - Avg Base time: 7.39s
+2024-12-16 04:26:57,768 - INFO - 
+Category: tournament_icm_pressure
+2024-12-16 04:26:57,769 - INFO - Cases: 1
+2024-12-16 04:26:57,769 - INFO - Avg FT time: 0.64s
+2024-12-16 04:26:57,770 - INFO - Avg Base time: 6.97s
+2024-12-16 04:26:57,770 - INFO - 
+Category: tournament_bubble_play
+2024-12-16 04:26:57,771 - INFO - Cases: 1
+2024-12-16 04:26:57,771 - INFO - Avg FT time: 4.65s
+2024-12-16 04:26:57,771 - INFO - Avg Base time: 10.90s
+2024-12-16 04:26:57,772 - INFO - 
+Category: player_adjustments_exploitative
+2024-12-16 04:26:57,772 - INFO - Cases: 1
+2024-12-16 04:26:57,773 - INFO - Avg FT time: 0.68s
+2024-12-16 04:26:57,773 - INFO - Avg Base time: 12.62s
+2024-12-16 04:26:57,774 - INFO - 
+Category: player_adjustments_table_dynamics
+2024-12-16 04:26:57,774 - INFO - Cases: 1
+2024-12-16 04:26:57,774 - INFO - Avg FT time: 0.96s
+2024-12-16 04:26:57,775 - INFO - Avg Base time: 6.95s
+2024-12-16 04:26:57,775 - INFO - 
+Category: hand_reading_range_analysis
+2024-12-16 04:26:57,776 - INFO - Cases: 1
+2024-12-16 04:26:57,776 - INFO - Avg FT time: 0.90s
+2024-12-16 04:26:57,776 - INFO - Avg Base time: 12.05s
+2024-12-16 04:26:57,777 - INFO - 
+Category: hand_reading_live_tells
+2024-12-16 04:26:57,777 - INFO - Cases: 1
+2024-12-16 04:26:57,778 - INFO - Avg FT time: 1.39s
+2024-12-16 04:26:57,778 - INFO - Avg Base time: 4.56s
+2024-12-16 04:26:57,779 - INFO - 
+Category: end_game_heads_up
+2024-12-16 04:26:57,779 - INFO - Cases: 1
+2024-12-16 04:26:57,779 - INFO - Avg FT time: 0.73s
+2024-12-16 04:26:57,780 - INFO - Avg Base time: 13.18s
+2024-12-16 04:26:57,780 - INFO - 
+Category: end_game_final_table
+2024-12-16 04:26:57,780 - INFO - Cases: 1
+2024-12-16 04:26:57,781 - INFO - Avg FT time: 3.01s
+2024-12-16 04:26:57,781 - INFO - Avg Base time: 14.51s
+2024-12-16 04:26:57,782 - INFO - 
+Category: mental_game_tilt_control
+2024-12-16 04:26:57,782 - INFO - Cases: 1
+2024-12-16 04:26:57,783 - INFO - Avg FT time: 0.61s
+2024-12-16 04:26:57,783 - INFO - Avg Base time: 13.70s
+2024-12-16 04:26:57,783 - INFO - 
+Category: mental_game_bankroll_management
+2024-12-16 04:26:57,784 - INFO - Cases: 1
+2024-12-16 04:26:57,784 - INFO - Avg FT time: 6.37s
+2024-12-16 04:26:57,784 - INFO - Avg Base time: 7.53s
