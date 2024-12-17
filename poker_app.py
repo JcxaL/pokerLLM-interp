@@ -80,7 +80,7 @@ st.markdown(
         font-size: 0.9em;
     }
     
-    /* Tooltip Styles */
+    /* New Tooltip Styles */
     .tooltip-container {
         position: relative;
         display: inline-block;
@@ -140,7 +140,7 @@ def create_tooltip(label: str, tooltip_text: str) -> str:
             <span class="tooltip-text">{tooltip_text}</span>
         </div>
     """
-
+    
 def create_card_selector(key_prefix: str, label: str = "") -> str:
     """Create a card selector with rank and suit."""
     ranks = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A']
@@ -186,19 +186,20 @@ def initialize_openai():
             st.error('Please enter your OpenAI API key to continue!')
             st.stop()
 
-    openai.api_key = api_key
+    return openai.OpenAI(api_key=api_key)
+
 
 class PokerStrategyAdvisor:
     def __init__(self, model_id: str = "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or"):
         self.model_id = model_id
-        initialize_openai()
+        self.client = initialize_openai()
         self.system_prompt = """You are a GTO Strategy & Balancing Specialist with vision capabilities. 
-You can interpret game situations from text and images:
-- Provide unexploitable strategies for each betting round
-- Ideal action frequencies
-- Balanced ranges with value hands and bluffs
-- Consider board textures, stack sizes, pot sizes, player count
-- Use mixed strategy ratios when applicable"""
+        You can interpret game situations from text and images:
+        - Provide unexploitable strategies for each betting round
+        - Ideal action frequencies
+        - Balanced ranges with value hands and bluffs
+        - Consider board textures, stack sizes, pot sizes, player count
+        - Use mixed strategy ratios when applicable"""
 
     def get_advice(self, situation: Dict) -> Dict:
         try:
@@ -209,6 +210,7 @@ You can interpret game situations from text and images:
             ]
 
             # If image content is available and the model supports it
+            # This is placeholder logic. In a real scenario, you'd format as required:
             if situation.get("image_content"):
                 image_message = {
                     "role": "user",
@@ -224,7 +226,7 @@ You can interpret game situations from text and images:
                 }
                 messages.append(image_message)
 
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model=self.model_id,
                 messages=messages,
                 temperature=situation.get("temperature", 0.7),
@@ -245,14 +247,14 @@ You can interpret game situations from text and images:
     def _format_situation(self, situation: Dict) -> str:
         # Construct a textual scenario description
         desc = f"""Analyze this poker situation:
-Position: {situation.get('position', 'N/A')}
-Stage: {situation.get('stage', 'N/A')}
-Hand: {situation.get('hand', 'N/A')}
-Board: {situation.get('board', 'N/A')}
-Stack Size: {situation.get('stack_size', '100BB')}
-Game Type: {situation.get('game_type', 'N/A')}
-Previous Action: {situation.get('previous_action', 'N/A')}
-"""
+        Position: {situation.get('position', 'N/A')}
+        Stage: {situation.get('stage', 'N/A')}
+        Hand: {situation.get('hand', 'N/A')}
+        Board: {situation.get('board', 'N/A')}
+        Stack Size: {situation.get('stack_size', '100BB')}
+        Game Type: {situation.get('game_type', 'N/A')}
+        Previous Action: {situation.get('previous_action', 'N/A')}
+        """
         # Add Pro mode details if available
         if situation.get('pro_mode', False):
             desc += f"Pot Size: {situation.get('pot_size','N/A')}\n"
@@ -262,28 +264,23 @@ Previous Action: {situation.get('previous_action', 'N/A')}
         return desc
 
 def main():
-    # --- HEADER ---
-    header_image_url = "header.png"  # Replace with your image path or URL
-    if os.path.exists(header_image_url):
-        st.image(header_image_url, use_column_width='auto', caption="")
-    else:
-        st.write("")  # Placeholder if no image is available
     st.markdown("<div class='title'>Poker Strategy Advisor</div>", unsafe_allow_html=True)
     st.markdown("<div class='subtitle'>Interpreting Game Theory Optimal strategies for Texas Hold'em (with Vision)</div>", unsafe_allow_html=True)
 
     # SIDEBAR
     st.sidebar.title("Session Settings")
 
-    # Initialize advisor
-    advisor = PokerStrategyAdvisor()
+    # API Key input if needed
+    if 'OPENAI_API_KEY' not in os.environ and 'openai_api_key' not in st.secrets:
+        api_key = st.sidebar.text_input('OpenAI API Key', type='password')
+        if api_key:
+            os.environ['OPENAI_API_KEY'] = api_key
+        else:
+            st.error('Please enter your OpenAI API key to continue!')
+            st.stop()
 
     # Mode selection
     mode = st.sidebar.radio("Select Mode", ["Beginner", "Pro"], index=0)
-
-    # Tooltip Toggle for Beginner Mode
-    show_tooltips = False
-    if mode == "Beginner":
-        show_tooltips = st.sidebar.checkbox("Enable Hover Hints", value=False)
 
     # Advanced parameters in Pro Mode
     if mode == "Pro":
@@ -313,6 +310,8 @@ def main():
 [OpenAI Fine-tuning Docs](https://platform.openai.com/docs/guides/fine-tuning)
         """)
 
+    advisor = PokerStrategyAdvisor()
+
     # MAIN CONTENT
     st.markdown("## Current Situation")
 
@@ -335,136 +334,122 @@ def main():
         col1, col2 = st.columns([1,1])
         
         with col1:
-            # Position
-            if show_tooltips:
-                st.markdown(create_tooltip("🔎 Position", tooltips["position"]), unsafe_allow_html=True)
-            else:
-                st.markdown("🔎 Position")
+            st.markdown(create_tooltip("🔎 Position", tooltips["position"]), unsafe_allow_html=True)
             position = st.selectbox("", ["BTN", "SB", "BB", "UTG", "MP", "CO"], key="pos")
             
-            # Stage
-            if show_tooltips:
-                st.markdown(create_tooltip("🃏 Stage", tooltips["stage"]), unsafe_allow_html=True)
-            else:
-                st.markdown("🃏 Stage")
+            st.markdown(create_tooltip("🃏 Stage", tooltips["stage"]), unsafe_allow_html=True)
             stage = st.selectbox("", ["Preflop", "Flop", "Turn", "River"], key="stage")
             
-            # Hand Selection
-            if show_tooltips:
-                st.markdown(create_tooltip("📝 Your Hand", tooltips["hand"]), unsafe_allow_html=True)
-            else:
-                st.markdown("📝 Your Hand")
+            # Hand selection
+            st.markdown(create_tooltip("📝 Your Hand", tooltips["hand"]), unsafe_allow_html=True)
             hand = create_hand_selector("beginner")
             
-            # Board Selection
-            if show_tooltips:
-                st.markdown(create_tooltip("🌍 Board", tooltips["board"]), unsafe_allow_html=True)
-            else:
-                st.markdown("🌍 Board")
+            # Dynamic board selection based on stage
+            st.markdown(create_tooltip("🌍 Board", tooltips["board"]), unsafe_allow_html=True)
             if stage != "Preflop":
+                st.markdown("### Board Cards")
                 if stage == "Flop":
                     num_cards = 3
                 elif stage == "Turn":
                     num_cards = 4
                 else:  # River
                     num_cards = 5
-                board = create_board_selector("beginner", num_cards)
+                    
+                board_cards = []
+                for i in range(num_cards):
+                    card = create_card_selector(f"{'pro' if mode=='Pro' else 'beginner'}_board_{i}", f"Card {i+1}")
+                    board_cards.append(card)
+                board = " ".join(board_cards)
             else:
                 board = ""
             
-            # Previous Action
-            if show_tooltips:
-                st.markdown(create_tooltip("💬 Previous Action", tooltips["previous_action"]), unsafe_allow_html=True)
-            else:
-                st.markdown("💬 Previous Action")
+            st.markdown(create_tooltip("💬 Previous Action", tooltips["previous_action"]), unsafe_allow_html=True)
             previous_action = st.text_area("", "e.g. UTG raised 3BB, MP called...", key="prev_action")
 
         with col2:
             st.markdown("### Optional Image Input")
-            uploaded_image = st.file_uploader("Upload image (optional)", type=["png", "jpg", "jpeg"], key="beginner_image")
+            uploaded_image = st.file_uploader("Upload image (optional)", type=["png", "jpg", "jpeg"])
             image_content = None
             if uploaded_image is not None:
                 st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
-                # In a real scenario, you would upload the image to a server or cloud storage and obtain a URL
-                # Here, we'll simulate with a placeholder URL
-                image_content = "https://example.com/path/to/uploaded_image.jpg"
+                image_content = "https://example.com/path/to/image.jpg"
+
+        pot_size = None
+        num_players = None
+        custom_cards = None
+        pro_mode_flag = False
 
     else:  # Pro Mode
         col1, col2 = st.columns([1,1])
         
         with col1:
-            # Position
-            st.markdown("🔎 Position")
+            st.markdown(create_tooltip("🔎 Position", tooltips["position"]), unsafe_allow_html=True)
             position = st.selectbox("", ["BTN", "SB", "BB", "UTG", "MP", "CO"], key="pro_pos")
             
-            # Stage
-            st.markdown("🃏 Stage")
+            st.markdown(create_tooltip("🃏 Stage", tooltips["stage"]), unsafe_allow_html=True)
             stage = st.selectbox("", ["Preflop", "Flop", "Turn", "River"], key="pro_stage")
             
-            # Hand Selection
-            st.markdown("📝 Your Hand")
+            # Hand selection
+            st.markdown(create_tooltip("📝 Your Hand", tooltips["hand"]), unsafe_allow_html=True)
             hand = create_hand_selector("pro")
             
-            # Board Selection
-            st.markdown("🌍 Board")
+            # Dynamic board selection based on stage
+            st.markdown(create_tooltip("🌍 Board", tooltips["board"]), unsafe_allow_html=True)
             if stage != "Preflop":
+                st.markdown("### Board Cards")
                 if stage == "Flop":
                     num_cards = 3
                 elif stage == "Turn":
                     num_cards = 4
                 else:  # River
                     num_cards = 5
-                board = create_board_selector("pro", num_cards)
+                    
+                board_cards = []
+                for i in range(num_cards):
+                    card = create_card_selector(f"{'pro' if mode=='Pro' else 'beginner'}_board_{i}", f"Card {i+1}")
+                    board_cards.append(card)
+                board = " ".join(board_cards)
             else:
                 board = ""
             
-            # Previous Action
-            st.markdown("💬 Previous Action")
+            st.markdown(create_tooltip("💬 Previous Action", tooltips["previous_action"]), unsafe_allow_html=True)
             previous_action = st.text_area("", "Describe last betting actions", key="pro_prev_action")
-            
-            # Pot Size
-            st.markdown("💲 Pot Size")
+
+            st.markdown(create_tooltip("💲 Pot Size", tooltips["pot_size"]), unsafe_allow_html=True)
             pot_size = st.number_input("", min_value=0, value=100, key="pro_pot_size")
             
-            # Number of Players
-            st.markdown("👥 Number of Players")
+            st.markdown(create_tooltip("👥 Number of Players", tooltips["num_players"]), unsafe_allow_html=True)
             num_players = st.slider("", 2, 10, 6, key="pro_num_players")
             
-            # Known Opponent Cards
-            st.markdown("🗃 Known Opponent Cards")
+            # Known opponent cards selection
+            st.markdown(create_tooltip("🗃 Known Opponent Cards", tooltips["custom_cards"]), unsafe_allow_html=True)
             if st.checkbox("Add opponent cards", key="pro_add_opp_cards"):
                 custom_cards = create_hand_selector("pro_opp")
             else:
                 custom_cards = ""
-        
+
         with col2:
             st.markdown("### Optional Image Input")
             uploaded_image = st.file_uploader("Upload reference image", type=["png", "jpg", "jpeg"], key="pro_image")
             image_content = None
             if uploaded_image is not None:
                 st.image(uploaded_image, caption="Uploaded Image", use_container_width=True)
-                # Simulate image URL
-                image_content = "https://example.com/path/to/uploaded_image.jpg"
-            
+                image_content = "https://example.com/path/to/image.jpg"
+
             st.markdown("#### Speech Input (Experimental)")
-            if st.button("🎤 Record Speech", key="pro_speech"):
+            st.markdown(create_tooltip("🎤 Speech Input", tooltips["speech_input"]), unsafe_allow_html=True)
+            if st.button("Record Speech", key="pro_speech"):
                 st.info("Simulating speech capture... (In a real implementation, speech-to-text would occur here)")
-                # Append simulated speech input to previous_action
                 previous_action += "\n[Speech Input: Player said 'Let's gamble big!']"
 
-    # Sidebar Stack Size and Game Type (Common to both modes)
-    if mode == "Beginner":
-        st.sidebar.markdown("💰 Stack Size")
-        stack_size = st.sidebar.slider("", 10, 200, 100, key="stack_size_beginner")
-        
-        st.sidebar.markdown("🎮 Game Type")
-        game_type = st.sidebar.selectbox("", ["Cash Game", "Tournament"], key="game_type_beginner")
-    else:
-        st.sidebar.markdown("💰 Stack Size")
-        stack_size = st.sidebar.slider("", 10, 200, 100, key="stack_size_pro")
-        
-        st.sidebar.markdown("🎮 Game Type")
-        game_type = st.sidebar.selectbox("", ["Cash Game", "Tournament"], key="game_type_pro")
+        pro_mode_flag = True
+
+    # Sidebar elements with tooltips
+    st.sidebar.markdown(create_tooltip("💰 Stack Size", tooltips["stack_size"]), unsafe_allow_html=True)
+    stack_size = st.sidebar.slider("", 10, 200, 100)
+
+    st.sidebar.markdown(create_tooltip("🎮 Game Type", tooltips["game_type"]), unsafe_allow_html=True)
+    game_type = st.sidebar.selectbox("", ["Cash Game", "Tournament"])
 
     st.markdown("---")
     st.markdown("## Get Strategic Advice")
@@ -484,10 +469,10 @@ def main():
             "top_p": top_p,
             "frequency_penalty": frequency_penalty,
             "presence_penalty": presence_penalty,
-            "pro_mode": mode == "Pro",
-            "pot_size": pot_size if mode == "Pro" else None,
-            "num_players": num_players if mode == "Pro" else None,
-            "custom_cards": custom_cards if mode == "Pro" else None,
+            "pro_mode": pro_mode_flag,
+            "pot_size": pot_size if pro_mode_flag else None,
+            "num_players": num_players if pro_mode_flag else None,
+            "custom_cards": custom_cards if pro_mode_flag else None,
             "image_content": image_content
         }
 

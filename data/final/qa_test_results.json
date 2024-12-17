@@ -1,0 +1,287 @@
+{
+  "basic_concepts_fundamentals": {
+    "metrics": {
+      "ft_conciseness": 0.5833333333333334,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.48348333333333343,
+      "base_clarity": 0.5791333333333333,
+      "ft_reasoning_depth": 0.6000000000000001,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 133.33333333333334,
+      "clarity_improvement": -16.51605847818577,
+      "reasoning_depth_improvement": -39.99999999999999
+    }
+  },
+  "strategic_preflop_strategy": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.7053,
+      "base_clarity": 0.70075,
+      "ft_reasoning_depth": 0.7,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": 0.6493043168034327,
+      "reasoning_depth_improvement": -30.000000000000004
+    }
+  },
+  "strategic_postflop_strategy": {
+    "metrics": {
+      "ft_conciseness": 0.5625,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.6148750000000001,
+      "base_clarity": 0.6519499999999999,
+      "ft_reasoning_depth": 0.35,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 125.0,
+      "clarity_improvement": -5.686785796456762,
+      "reasoning_depth_improvement": -65.0
+    }
+  },
+  "complex_spots_multiway_pots": {
+    "metrics": {
+      "ft_conciseness": 0.625,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.62275,
+      "base_clarity": 0.6652499999999999,
+      "ft_reasoning_depth": 0.4,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 150.0,
+      "clarity_improvement": -6.388575723412232,
+      "reasoning_depth_improvement": -60.0
+    }
+  },
+  "complex_spots_bluff_spots": {
+    "metrics": {
+      "ft_conciseness": 0.75,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5977,
+      "base_clarity": 0.6264500000000001,
+      "ft_reasoning_depth": 0.2,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 200.0,
+      "clarity_improvement": -4.58935270173199,
+      "reasoning_depth_improvement": -80.0
+    }
+  },
+  "complex_spots_balance_sizing": {
+    "metrics": {
+      "ft_conciseness": 0.25,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5964,
+      "base_clarity": 0.6054999999999999,
+      "ft_reasoning_depth": 0.8,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 0.0,
+      "clarity_improvement": -1.502890173410386,
+      "reasoning_depth_improvement": -19.999999999999996
+    }
+  },
+  "complex_spots_turn_barreling": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.6441,
+      "base_clarity": 0.5168,
+      "ft_reasoning_depth": 0.8,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": 24.632352941176464,
+      "reasoning_depth_improvement": -19.999999999999996
+    }
+  },
+  "tournament_icm_pressure": {
+    "metrics": {
+      "ft_conciseness": 0.875,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5363,
+      "base_clarity": 0.6082000000000001,
+      "ft_reasoning_depth": 0.0,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 250.0,
+      "clarity_improvement": -11.821769154883272,
+      "reasoning_depth_improvement": -100.0
+    }
+  },
+  "tournament_bubble_play": {
+    "metrics": {
+      "ft_conciseness": 0.75,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5202,
+      "base_clarity": 0.60345,
+      "ft_reasoning_depth": 0.6000000000000001,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 200.0,
+      "clarity_improvement": -13.79567486950038,
+      "reasoning_depth_improvement": -39.99999999999999
+    }
+  },
+  "tournament_final_table": {
+    "metrics": {
+      "ft_conciseness": 0.25,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5493,
+      "base_clarity": 0.5178,
+      "ft_reasoning_depth": 1.0,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 0.0,
+      "clarity_improvement": 6.083429895712625,
+      "reasoning_depth_improvement": 0.0
+    }
+  },
+  "tournament_short_stack_icm": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.4458,
+      "base_clarity": 0.5015999999999999,
+      "ft_reasoning_depth": 1.0,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": -11.124401913875593,
+      "reasoning_depth_improvement": 0.0
+    }
+  },
+  "hand_reading_range_analysis": {
+    "metrics": {
+      "ft_conciseness": 1.0,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.6879,
+      "base_clarity": 0.74205,
+      "ft_reasoning_depth": 0.1,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 300.0,
+      "clarity_improvement": -7.297351930462911,
+      "reasoning_depth_improvement": -90.0
+    }
+  },
+  "hand_reading_live_tells": {
+    "metrics": {
+      "ft_conciseness": 0.625,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.48519999999999996,
+      "base_clarity": 0.46845000000000003,
+      "ft_reasoning_depth": 0.7,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 150.0,
+      "clarity_improvement": 3.5756217312413128,
+      "reasoning_depth_improvement": -30.000000000000004
+    }
+  },
+  "hand_reading_combo_counting": {
+    "metrics": {
+      "ft_conciseness": 0.75,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.7155,
+      "base_clarity": 0.7012999999999999,
+      "ft_reasoning_depth": 0.4,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 200.0,
+      "clarity_improvement": 2.024811065164709,
+      "reasoning_depth_improvement": -60.0
+    }
+  },
+  "hand_reading_node_locking": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.3395,
+      "base_clarity": 0.4464,
+      "ft_reasoning_depth": 1.0,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": -23.947132616487455,
+      "reasoning_depth_improvement": 0.0
+    }
+  },
+  "end_game_heads_up": {
+    "metrics": {
+      "ft_conciseness": 0.875,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.53355,
+      "base_clarity": 0.6060000000000001,
+      "ft_reasoning_depth": 0.30000000000000004,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 250.0,
+      "clarity_improvement": -11.955445544554474,
+      "reasoning_depth_improvement": -70.0
+    }
+  },
+  "end_game_final_table": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.4891,
+      "base_clarity": 0.61075,
+      "ft_reasoning_depth": 0.6,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": -19.91813344248875,
+      "reasoning_depth_improvement": -40.0
+    }
+  },
+  "end_game_short_stack": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5963499999999999,
+      "base_clarity": 0.5603,
+      "ft_reasoning_depth": 0.4,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": 6.434053185793309,
+      "reasoning_depth_improvement": -60.0
+    }
+  },
+  "challenge_scenario_gto_subtlety": {
+    "metrics": {
+      "ft_conciseness": 0.5,
+      "base_conciseness": 0.25,
+      "ft_clarity": 0.5253,
+      "base_clarity": 0.6738,
+      "ft_reasoning_depth": 0.4,
+      "base_reasoning_depth": 1.0
+    },
+    "improvement": {
+      "conciseness_improvement": 100.0,
+      "clarity_improvement": -22.039180765805874,
+      "reasoning_depth_improvement": -60.0
+    }
+  }
+}
