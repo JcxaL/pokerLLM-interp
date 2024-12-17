@@ -1,8 +1,12 @@
-pandas
-pdfplumber
-pytesseract
-Pillow
+# Core UI
+streamlit
+
+# Environment and Config
+python-dotenv
+
+# AI Integration
 openai
-transformers
-torchw
-python-d-dotenvadada
+
+# Date/Time Handling (from standard library, no need to include)
+# datetime
+# typing
