@@ -1,0 +1,51 @@
+{
+  "timestamp": "20241217_145128",
+  "overall_accuracy": {
+    "fine_tuned": 80.0,
+    "base": 73.33333333333333,
+    "improvement": 6.666666666666671
+  },
+  "category_accuracy": {
+    "basic_concepts": {
+      "fine_tuned": 100.0,
+      "base": 100.0,
+      "improvement": 0.0
+    },
+    "gto_concepts": {
+      "fine_tuned": 66.66666666666666,
+      "base": 66.66666666666666,
+      "improvement": 0.0
+    },
+    "tournament_strategy": {
+      "fine_tuned": 33.33333333333333,
+      "base": 33.33333333333333,
+      "improvement": 0.0
+    },
+    "exploitative_approaches": {
+      "fine_tuned": 100.0,
+      "base": 50.0,
+      "improvement": 50.0
+    },
+    "cash_game_strategy": {
+      "fine_tuned": 100.0,
+      "base": 100.0,
+      "improvement": 0.0
+    },
+    "postflop_strategy": {
+      "fine_tuned": 100.0,
+      "base": 100.0,
+      "improvement": 0.0
+    },
+    "preflop_strategy": {
+      "fine_tuned": 100.0,
+      "base": 100.0,
+      "improvement": 0.0
+    }
+  },
+  "metadata": {
+    "fine_tuned_model": "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or",
+    "base_model": "gpt-4o-mini-2024-07-18",
+    "timestamp": "20241217_145128",
+    "total_questions": 15
+  }
+}

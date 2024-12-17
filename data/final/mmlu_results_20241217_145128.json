@@ -1,0 +1,213 @@
+{
+  "fine_tuned": {
+    "correct": 12,
+    "total": 15,
+    "by_category": {
+      "basic_concepts": {
+        "correct": 3,
+        "total": 3
+      },
+      "gto_concepts": {
+        "correct": 2,
+        "total": 3
+      },
+      "tournament_strategy": {
+        "correct": 1,
+        "total": 3
+      },
+      "exploitative_approaches": {
+        "correct": 2,
+        "total": 2
+      },
+      "cash_game_strategy": {
+        "correct": 2,
+        "total": 2
+      },
+      "postflop_strategy": {
+        "correct": 1,
+        "total": 1
+      },
+      "preflop_strategy": {
+        "correct": 1,
+        "total": 1
+      }
+    }
+  },
+  "base": {
+    "correct": 11,
+    "total": 15,
+    "by_category": {
+      "basic_concepts": {
+        "correct": 3,
+        "total": 3
+      },
+      "gto_concepts": {
+        "correct": 2,
+        "total": 3
+      },
+      "tournament_strategy": {
+        "correct": 1,
+        "total": 3
+      },
+      "exploitative_approaches": {
+        "correct": 1,
+        "total": 2
+      },
+      "cash_game_strategy": {
+        "correct": 2,
+        "total": 2
+      },
+      "postflop_strategy": {
+        "correct": 1,
+        "total": 1
+      },
+      "preflop_strategy": {
+        "correct": 1,
+        "total": 1
+      }
+    }
+  },
+  "detailed_responses": [
+    {
+      "category": "basic_concepts",
+      "question": "What is the optimal continuation bet size on dry boards?",
+      "correct_answer": "25-33% pot",
+      "ft_response": "25-33% pot",
+      "ft_correct": true,
+      "base_response": "25-33% pot",
+      "base_correct": true
+    },
+    {
+      "category": "gto_concepts",
+      "question": "What's the minimum defense frequency against a pot-sized bet?",
+      "correct_answer": "40%",
+      "ft_response": "33%",
+      "ft_correct": false,
+      "base_response": "33%",
+      "base_correct": false
+    },
+    {
+      "category": "tournament_strategy",
+      "question": "In ICM situations, which hands should you adjust first?",
+      "correct_answer": "Marginal bluff catchers",
+      "ft_response": "Premium pairs",
+      "ft_correct": false,
+      "base_response": "Strong drawing hands",
+      "base_correct": false
+    },
+    {
+      "category": "basic_concepts",
+      "question": "Which starting hand is generally considered the strongest in No-Limit Hold'em?",
+      "correct_answer": "A\u2660A\u2665",
+      "ft_response": "A\u2660A\u2665",
+      "ft_correct": true,
+      "base_response": "A\u2660A\u2665",
+      "base_correct": true
+    },
+    {
+      "category": "basic_concepts",
+      "question": "How many community cards are dealt in a standard Texas Hold'em hand?",
+      "correct_answer": "5",
+      "ft_response": "5",
+      "ft_correct": true,
+      "base_response": "5",
+      "base_correct": true
+    },
+    {
+      "category": "gto_concepts",
+      "question": "In a GTO strategy, what is the primary goal?",
+      "correct_answer": "Make your strategy unexploitable",
+      "ft_response": "Make your strategy unexploitable.",
+      "ft_correct": true,
+      "base_response": "Make your strategy unexploitable.",
+      "base_correct": true
+    },
+    {
+      "category": "gto_concepts",
+      "question": "When facing a balanced opponent, a GTO strategy will involve:",
+      "correct_answer": "Bluffing with the correct frequency",
+      "ft_response": "Bluffing with the correct frequency.",
+      "ft_correct": true,
+      "base_response": "Bluffing with the correct frequency.",
+      "base_correct": true
+    },
+    {
+      "category": "tournament_strategy",
+      "question": "As the tournament bubble approaches, how should short-stacked players adjust?",
+      "correct_answer": "Play more conservatively",
+      "ft_response": "Play more aggressively.",
+      "ft_correct": false,
+      "base_response": "Play more aggressively.",
+      "base_correct": false
+    },
+    {
+      "category": "tournament_strategy",
+      "question": "In progressive knockout tournaments, how should you adjust your calling ranges against shorter stacks?",
+      "correct_answer": "Loosen your calls",
+      "ft_response": "Loosen your calls.",
+      "ft_correct": true,
+      "base_response": "Loosen your calls.",
+      "base_correct": true
+    },
+    {
+      "category": "exploitative_approaches",
+      "question": "If an opponent folds too often to continuation bets, what is the best exploit?",
+      "correct_answer": "Increase bluff frequency",
+      "ft_response": "Increase bluff frequency",
+      "ft_correct": true,
+      "base_response": "Increase bluff frequency",
+      "base_correct": true
+    },
+    {
+      "category": "exploitative_approaches",
+      "question": "If an opponent never bluffs the river, the best exploitative adjustment is to:",
+      "correct_answer": "Fold more often",
+      "ft_response": "Fold more often",
+      "ft_correct": true,
+      "base_response": "Call down more often.",
+      "base_correct": false
+    },
+    {
+      "category": "cash_game_strategy",
+      "question": "In deep-stacked cash games, why might a polarized 3-betting range be advantageous?",
+      "correct_answer": "To pressure opponents with strong value and balanced bluff hands",
+      "ft_response": "To pressure opponents with strong value and balanced bluff hands.",
+      "ft_correct": true,
+      "base_response": "To pressure opponents with strong value and balanced bluff hands.",
+      "base_correct": true
+    },
+    {
+      "category": "cash_game_strategy",
+      "question": "Why is position especially valuable in deep-stacked cash games?",
+      "correct_answer": "You can better control pot size and realize equity",
+      "ft_response": "You can better control pot size and realize equity",
+      "ft_correct": true,
+      "base_response": "You can better control pot size and realize equity.",
+      "base_correct": true
+    },
+    {
+      "category": "postflop_strategy",
+      "question": "On a highly coordinated flop (e.g., J\u2660T\u26659\u2663), what is the typical continuation bet frequency?",
+      "correct_answer": "Low frequency",
+      "ft_response": "Low frequency",
+      "ft_correct": true,
+      "base_response": "Low frequency",
+      "base_correct": true
+    },
+    {
+      "category": "preflop_strategy",
+      "question": "In a 6-max cash game, what is a typical open-raise size from the Button?",
+      "correct_answer": "2-2.5x the big blind",
+      "ft_response": "2-2.5x the big blind",
+      "ft_correct": true,
+      "base_response": "2-2.5x the big blind",
+      "base_correct": true
+    }
+  ],
+  "metadata": {
+    "fine_tuned_model": "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or",
+    "base_model": "gpt-4o-mini-2024-07-18",
+    "timestamp": "20241217_145128",
+    "total_questions": 15
+  }
+}
