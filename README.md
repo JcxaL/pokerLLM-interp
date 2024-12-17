@@ -1,4 +1,4 @@
-# **Poker GTO Interpreter using Large Language Models (LLMs)**
+# **Fine-Tuning LLMs for Interpreting Game Theory Optimal Strategies in Poker**
 
 ## **Project Overview**
 This project bridges the gap between quantitative **Game Theory Optimal (GTO)** strategies and interpretability in **No-Limit Texas Hold'em poker**. By fine-tuning a language model, we transform raw GTO outputs and poker data into **actionable strategic insights**, enabling players to understand and apply optimal poker strategies effectively.
