@@ -33,8 +33,8 @@ poker-LLM/
     ├── part2_classifier.ipynb # Feature engineering for model input
     ├── part3_augmentation.ipynb # Context-based data augmentation for scarce sources
     ├── part4_finetune.ipynb  # Fine-tuning the LLM for poker reasoning
-    ├── part5_validation.ipynb # Performance validation and benchmarks
-    └── part6_serving.ipynb   # Deployment testing and utilities
+    ├── part5_validation.ipynb # Performance validation and benchmarks Trial
+    └── part5a_summarization_plots.ipynb # Performance validation and benchmarks Final
 ```
 
 ---
