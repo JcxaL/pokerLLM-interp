@@ -1,0 +1,44 @@
+# Git
+.git
+.gitignore
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Node.js frontend
+frontend/
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Local development
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Documentation
+docs/
+*.md 

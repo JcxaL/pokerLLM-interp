@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
+import ReactMarkdown from 'react-markdown';
 
 // API base URL configuration
 const API_BASE_URL = 'http://localhost:8000';  // 或者您的实际后端URL
@@ -21,6 +22,14 @@ interface GameState {
 
 interface ChatInterfaceProps {
   gameState?: GameState;
+  modelParams?: {
+    model_id: string;
+    temperature: number;
+    max_tokens: number;
+    top_p: number;
+    frequency_penalty: number;
+    presence_penalty: number;
+  };
 }
 
 const formatCard = (card: { rank: string; suit: string }) => `${card.rank}${card.suit}`;
@@ -54,7 +63,44 @@ const hasValidGameState = (state?: GameState): boolean => {
   );
 };
 
-const ChatInterface: React.FC<ChatInterfaceProps> = ({ gameState }) => {
+const formatMessage = (text: string): string => {
+  // 将常见的策略格式转换为 Markdown
+  let formattedText = text;
+
+  // 处理百分比和频率
+  formattedText = formattedText.replace(
+    /(\d+(?:-\d+)?%)/g,
+    '**$1**'
+  );
+
+  // 处理标题
+  formattedText = formattedText.replace(
+    /((?:^|\n)[\w\s]+:)(?!\n)/g,
+    '\n### $1'
+  );
+
+  // 处理列表项
+  formattedText = formattedText.replace(
+    /(?:^|\n)- /g,
+    '\n• '
+  );
+
+  // 处理重要提示
+  formattedText = formattedText.replace(
+    /(Remember:|Note:|Important:)/g,
+    '**$1**'
+  );
+
+  // 处理动作和决策
+  formattedText = formattedText.replace(
+    /(Bet|Call|Fold|Raise|Check)(?=[\s:])/g,
+    '**$1**'
+  );
+
+  return formattedText;
+};
+
+const ChatInterface: React.FC<ChatInterfaceProps> = ({ gameState, modelParams }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [inputMessage, setInputMessage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -72,7 +118,6 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ gameState }) => {
     e.preventDefault();
     if (!inputMessage.trim()) return;
 
-    // 构建用户消息，包含游戏状态
     let userMessageText = inputMessage;
     if (hasValidGameState(gameState)) {
       userMessageText = `${inputMessage}\n\nGame State: ${formatGameState(gameState)}`;
@@ -92,7 +137,8 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ gameState }) => {
     try {
       const response = await axios.post(`${API_BASE_URL}/chat`, {
         message: userMessageText,
-        game_state: gameState || null
+        game_state: gameState || null,
+        model_params: modelParams || null
       }, {
         headers: {
           'Content-Type': 'application/json'
@@ -149,7 +195,15 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({ gameState }) => {
                   : 'bg-gray-100 text-gray-800'
               }`}
             >
-              <p className="text-sm whitespace-pre-wrap">{message.text}</p>
+              {message.type === 'bot' ? (
+                <div className="prose prose-sm max-w-none">
+                  <ReactMarkdown>
+                    {formatMessage(message.text)}
+                  </ReactMarkdown>
+                </div>
+              ) : (
+                <p className="text-sm whitespace-pre-wrap">{message.text}</p>
+              )}
               <p className="text-xs mt-1 opacity-70">
                 {message.timestamp.toLocaleTimeString()}
               </p>

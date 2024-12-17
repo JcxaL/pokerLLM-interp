@@ -12,7 +12,11 @@ def format_card(card: Dict[str, str]) -> str:
 class ChatService:
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
-        self.model = "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or"  # 您的fine-tuned模型
+        self.default_model = "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or"
+        self.available_models = {
+            "ft:gpt-4o-mini-2024-07-18:personal::Af1GA1or": "Fine-tuned Poker Model",
+            "gpt-4o-mini": "Standard GPT-4o Mini"
+        }
         self.system_prompt = """You are a GTO Strategy & Balancing Specialist with vision capabilities. 
         You can interpret game situations from text and images:
         - Provide unexploitable strategies for each betting round
@@ -21,7 +25,12 @@ class ChatService:
         - Consider board textures, stack sizes, pot sizes, player count
         - Use mixed strategy ratios when applicable"""
 
-    async def get_response(self, message: str, game_state: Optional[Dict[str, Any]] = None) -> str:
+    async def get_response(
+        self, 
+        message: str, 
+        game_state: Optional[Dict[str, Any]] = None,
+        model_params: Optional[Dict[str, Any]] = None
+    ) -> str:
         try:
             messages = [
                 {"role": "system", "content": self.system_prompt},
@@ -41,13 +50,19 @@ class ChatService:
                 """
                 messages.append({"role": "system", "content": context})
 
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
-                temperature=0.7,
-                max_tokens=512
-            )
+            # 设置模型参数，只保留支持的参数
+            model_params = model_params or {}
+            completion_params = {
+                "model": model_params.get('model_id', self.default_model),
+                "messages": messages,
+                "temperature": model_params.get('temperature', 0.7),
+                "max_tokens": model_params.get('max_tokens', 512),
+                "top_p": model_params.get('top_p', 1.0),
+                "frequency_penalty": model_params.get('frequency_penalty', 0),
+                "presence_penalty": model_params.get('presence_penalty', 0),
+            }
 
+            response = self.client.chat.completions.create(**completion_params)
             return response.choices[0].message.content.strip()
         except Exception as e:
             print(f"Error in chat service: {e}")
