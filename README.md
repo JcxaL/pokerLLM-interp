@@ -1,16 +1,16 @@
 # **Fine-Tuning LLMs for Interpreting Game Theory Optimal Strategies in Poker**
 
 ## **Project Overview**
-This project bridges the gap between quantitative **Game Theory Optimal (GTO)** strategies and interpretability in **No-Limit Texas Hold'em poker**. By fine-tuning a language model, we transform raw GTO outputs and poker data into **actionable strategic insights**, enabling players to understand and apply optimal poker strategies effectively.
+This project bridges the gap between quantitative **Game Theory Optimal (GTO)** strategies and interpretability in **No-Limit Texas Hold'em poker**. By fine-tuning a pretrained LLM model, we transform a diverse set of GTO/poker resources,otherwise unused, into **actionable strategic insights**, enabling players to understand and apply optimal poker strategies effectively in game and post-game. This can also encourage new players to self-study and improve their skills.
 
 ---
 
 ## **Features**
 - 🚀 **Advanced Data Processing**: Parse poker books, GTO solver outputs, and strategic content seamlessly.  
 - 🧠 **Fine-Tuned LLM Pipeline**: Specialized model trained on poker strategy and GTO concepts.  
-- 🖥️ **Interactive UI**: Streamlit-based interface for real-time strategy consultation.  
+- 🖥️ **Interactive UI**: React-based interface for real-time strategy consultation.  
 - 🔍 **Validation Framework**: Robust testing suite for model performance evaluation.  
-- 🖼️ **Multi-Modal Support**: Supports text, images, and structured poker data for broader applicability.  
+- 🖼️ **Multi-Modal Support**: Supports text, images, and structured poker data for broader applicability. Voice chat can also be added (capable) if future budget allows.
 
 ---
 
@@ -19,7 +19,7 @@ This project bridges the gap between quantitative **Game Theory Optimal (GTO)** 
 poker-LLM/
 ├── README.md                 # Project documentation
 ├── requirements.txt          # Dependencies list
-├── poker_app.py              # Streamlit-based interactive interface
+├── poker_app.py              # React-based interactive UI interface
 ├── data/
 │   ├── raw/                  # Original training data
 │   ├── processed/            # Preprocessed datasets
@@ -49,8 +49,9 @@ poker-LLM/
 
 ---
 
-## **Running the Application**
+## **Running the Application** 
 
+@TODO
 ### **1. Prerequisites**
 Install the required dependencies:
 ```bash
@@ -130,7 +131,7 @@ The **Current Situation Panel** enables interactive poker hand scenario descript
 
 ---
 
-#### Optional Image Input
+#### Image Input
 - Upload an image file for **complex hand visualizations** or **solver output screenshots**.
 - **Usage**: Drag and drop a file or browse for an image.
 - **File Size Limit**: 200MB (Although the model can handle larger files, it's recommended to keep it under 2MB for optimal performance)
@@ -168,6 +169,7 @@ To use the fine-tuned model, configure your OpenAI API key through one of the fo
      ```
 - Secure input via the UI.
 
+
 ---
 
 ## **Model Performance**
@@ -180,9 +182,9 @@ The fine-tuned LLM demonstrates significant improvements in:
 ---
 
 ## **Future Work**
-- Optimize the methodology for more GTO tasks
-- Integrate with real-time APIs to help with games
-- Expand datasets with expert players for better performance
+- Optimize the methodology for more GTO strategies
+- Integrate with real-time APIs to help with games live
+- Expand datasets with expert players for better performance and reliability
 
 ---
 
