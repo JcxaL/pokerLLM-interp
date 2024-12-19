@@ -2,6 +2,12 @@
 
 A FastAPI-based backend service for the Poker Web application, providing API endpoints for poker game management and analysis.
 
+![UI 1](https://pokerwebsite.s3.us-east-1.amazonaws.com/%E6%88%AA%E5%B1%8F2024-12-17+%E4%B8%8B%E5%8D%882.54.01.png)
+![UI 2](https://pokerwebsite.s3.us-east-1.amazonaws.com/%E6%88%AA%E5%B1%8F2024-12-16+%E4%B8%8B%E5%8D%8811.44.34.png)
+![UI 3](https://pokerwebsite.s3.us-east-1.amazonaws.com/%E6%88%AA%E5%B1%8F2024-12-18+%E4%B8%8B%E5%8D%887.14.38.png)
+
+
+
 ## 🚀 Features
 
 - FastAPI-powered REST API
@@ -25,6 +31,8 @@ A FastAPI-based backend service for the Poker Web application, providing API end
 git clone <repository-url>
 cd poker_web
 ```
+
+
 
 2. Create and activate a virtual environment:
 ```bash
