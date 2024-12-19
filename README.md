@@ -1,4 +1,4 @@
-# **Fine-Tuning LLMs for Interpreting Game Theory Optimal Strategies in Poker**
+# **♠️♥️♣️♦️ Fine-Tuning LLMs for Interpreting Game Theory Optimal Strategies in Poker ♠️♥️♣️♦️**
 
 ## **Project Overview**
 This project bridges the gap between quantitative **Game Theory Optimal (GTO)** strategies and interpretability in **No-Limit Texas Hold'em poker**. By fine-tuning a pretrained LLM model, we transform a diverse set of GTO/poker resources,otherwise unused, into **actionable strategic insights**, enabling players to understand and apply optimal poker strategies effectively in game and post-game. This can also encourage new players to self-study and improve their skills.
