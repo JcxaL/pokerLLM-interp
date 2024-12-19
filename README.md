@@ -6,7 +6,7 @@ A FastAPI-based backend service for the Poker Web application, providing API end
 ![UI 2](https://pokerwebsite.s3.us-east-1.amazonaws.com/%E6%88%AA%E5%B1%8F2024-12-16+%E4%B8%8B%E5%8D%8811.44.34.png)
 ![UI 3](https://pokerwebsite.s3.us-east-1.amazonaws.com/%E6%88%AA%E5%B1%8F2024-12-18+%E4%B8%8B%E5%8D%887.14.38.png)
 
-![youtube](https://youtu.be/CQW_0K7iGeQ)
+[Watch the video on YouTube](https://youtu.be/CQW_0K7iGeQ)
 ## 🚀 Features
 
 - FastAPI-powered REST API
